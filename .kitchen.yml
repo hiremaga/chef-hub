@@ -1,0 +1,15 @@
+---
+driver_plugin: vagrant
+
+platforms:
+- name: precise64
+  driver_config:
+    provider: vmware_fusion
+    box: precise64
+    require_chef_omnibus: true
+
+suites:
+- name: default
+  run_list:
+    - recipe[hub]
+  attributes: {}
